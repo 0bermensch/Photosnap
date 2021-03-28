@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "dmsans-bold";
+  src: url(../../assets/DM_Sans_Fonts/DMSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "dmsans";
+  src: url(../../assets/DM_Sans_Fonts/DMSans-Regular.ttf);
+}
+
+@mixin black {
+  color: #000000;
+}
+
+@mixin grey {
+  color: #dfdfdf;
+}
+
+@mixin white {
+  color: #ffffff;
+}
+
+@mixin h1 {
+  font-family: "dmsans-bold";
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17;
+}
+
+@mixin h2 {
+  font-family: "dmsans-bold";
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+@mixin h3 {
+  font-family: "dmsans-bold";
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+@mixin h4 {
+  font-family: "dmsans-bold";
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2;
+}
+@mixin body {
+  font-family: "dmsans";
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
