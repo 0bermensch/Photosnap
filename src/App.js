@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Stories from "./pages/Stories";
 import Pricing from "./pages/Pricing";
 import { Switch, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
