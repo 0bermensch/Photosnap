@@ -1,0 +1,10 @@
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 100% !important;
+  li {
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 
 export const DimensionsContext = createContext();
 
-const GlobalDimensions = () => {
+const GlobalDimensions = (props) => {
   /*
 The read-only Window property innerWidth returns the interior width of the window in pixels. 
 This includes the width of the vertical scroll bar, if one is present.

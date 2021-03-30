@@ -1,13 +1,18 @@
-// styling in phone, tablet, and laptop dimensions
-
-@mixin tablet {
-  @media only screen and (min-width: 768px) {
+@mixin rwd($screen) {
+  @media (max-width: $screen+"px") {
     @content;
   }
 }
 
-@mixin desktop {
-  @media only screen and (min-width: 1440px) {
-    @content;
-  }
+body {
+  max-width: 1900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
 }

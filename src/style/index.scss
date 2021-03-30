@@ -1,5 +1,7 @@
 @import "./partials/breakpoints";
 @import "./partials/fonts&colors";
+@import "./partials/navlinks";
+@import "./partials/button";
 @import "./partials/header";
 @import "./partials/footer";
 @import "./partials/home";
@@ -16,4 +18,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+body {
+  max-width: 1900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
 }
