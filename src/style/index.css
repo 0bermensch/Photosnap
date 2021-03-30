@@ -13,7 +13,7 @@ button {
 }
 
 html {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans";
   font-size: 15px;
   overflow-x: hidden;
 }
@@ -133,6 +133,7 @@ a {
           align-items: center;
   margin: 0 8vw;
   height: 72px;
+  font-weight: 700;
   padding: 10px 0;
 }
 
@@ -355,6 +356,7 @@ a {
   background-color: black;
   color: white;
   padding: 60px 8vw;
+  font-weight: 700;
 }
 
 .footer__logo {
