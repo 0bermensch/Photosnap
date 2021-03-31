@@ -1,2 +1,207 @@
 .home {
+  &__hero {
+    background-color: get-color(pure-black);
+    color: get-color(pure-white);
+    display: flex;
+    &__textbox {
+      position: relative;
+      flex: 0 0 42%;
+      margin: 30px 0;
+      padding: 0 5%;
+      align-self: center;
+      height: max-content;
+      &--context {
+        margin: 15px 0 25px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          to bottom,
+          get-color(gradient-1--orange),
+          get-color(gradient-2--purple),
+          get-color(gradient-3--blue)
+        );
+      }
+    }
+    &__image__container {
+      display: flex;
+      flex: 0 0 58%;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @include rwd(900) {
+      max-height: 525px;
+
+      &__textbox {
+        flex: 0 0 60%;
+      }
+      &__image__container {
+        flex: 0 0 40%;
+      }
+    }
+    @include rwd(570) {
+      flex-direction: column-reverse;
+      max-height: none;
+
+      &__textbox {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &::before {
+          height: 3px;
+          width: 100px;
+          top: -30px;
+          left: 5%;
+          background: linear-gradient(
+            to right,
+            get-color(gradient-1--orange),
+            get-color(gradient-2--purple),
+            get-color(gradient-3--blue)
+          );
+        }
+      }
+    }
+  }
+  &__card {
+    &__section {
+      display: flex;
+      &__textbox {
+        flex: 0 0 42%;
+        height: max-content;
+        align-self: center;
+        padding: 0 5%;
+        margin: 30px 0;
+        &--context {
+          margin: 15px 0 35px;
+        }
+      }
+      &__image {
+        display: flex;
+        flex: 0 0 58%;
+        img {
+          max-width: 100%;
+          width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+      &:nth-of-type(1) {
+        flex-direction: row-reverse;
+      }
+      @include rwd(900) {
+        max-height: 525px;
+        &__textbox {
+          flex: 0 0 60%;
+        }
+        &__image {
+          flex: 0 0 40%;
+        }
+      }
+      @include rwd(570) {
+        flex-direction: column-reverse;
+        max-height: none;
+
+        &:nth-of-type(1) {
+          flex-direction: column-reverse;
+        }
+
+        &__textbox {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+  &__stories {
+    display: flex;
+    .stories__thumbnail {
+      width: calc(100% / 4);
+    }
+    @include rwd(900) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .stories__thumbnail {
+        width: 100%;
+        max-height: 350px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+    @include rwd(550) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 8vw;
+    .feature__card {
+      width: calc(94% / 3);
+    }
+    @include rwd(900) {
+      flex-direction: column;
+      position: relative;
+
+      .feature__card {
+        display: flex;
+        width: 100%;
+        margin-bottom: 80px;
+
+        &__icons {
+          width: 40%;
+          align-self: center;
+          background-color: get-color(pure-white);
+        }
+
+        &__textbox {
+          width: 60%;
+          margin: auto;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 80%;
+        width: 8px;
+        background-color: get-color(light-gray);
+        left: calc(20% - 4px);
+        top: 10%;
+        z-index: -1;
+      }
+    }
+    @include rwd(550) {
+      &::after {
+        display: none;
+      }
+
+      .feature__card {
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        &__textbox {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

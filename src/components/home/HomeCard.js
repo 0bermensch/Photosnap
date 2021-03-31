@@ -1,30 +1,16 @@
-// import React from "react";
-// import arrow from "../../assets/shared/desktop/arrow.svg";
-
-// const HomeCard = (props) => {
-//   return (
-//     <div className="home__card">
-//       <div className="home__card--title">{props.title}</div>
-//       <div className="home__card--author"></div>
-//       <div className="home__card--section">
-//         <div className="home__card--read">READ STORY</div>
-//         <img className="home__card--arow" src={arrow} alt="arrow" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomeCard;
-
 import React, { useContext } from "react";
 import { DimensionsContext } from "../../GlobalDimensions";
 import Button from "../Button";
-import arrow from "../../assets/shared/desktop/arrow-white.svg";
+import arrow from "../../assets/shared/desktop/arrow.svg";
+import dpic1 from "../../assets/home/desktop/beautiful-stories.jpg";
+import tpic1 from "../../assets/home/tablet/beautiful-stories.jpg";
+import mpic1 from "../../assets/home/mobile/beautiful-stories.jpg";
+import dpic2 from "../../assets/home/desktop/designed-for-everyone.jpg";
+import tpic2 from "../../assets/home/tablet/designed-for-everyone.jpg";
+import mpic2 from "../../assets/home/mobile/designed-for-everyone.jpg";
 
 const HomeCard = () => {
   const { viewport } = useContext(DimensionsContext);
-  let firstimg = "beautiful-stories.jpg",
-    secondimg = "designed-for-everyone.jpg";
 
   return (
     <div className="home__card">
@@ -48,14 +34,8 @@ const HomeCard = () => {
         <div className="home__card__section__image">
           <img
             className="home__card__section__image--image"
-            src={
-              viewport > 900
-                ? require(`../../assets/home/desktop/` + firstimg)
-                : viewport > 570
-                ? require(`../../assets/home/tablet/` + firstimg)
-                : require(`../../assets/home/mobile/` + firstimg)
-            }
-            alt={firstimg}
+            src={viewport > 900 ? dpic1 : viewport > 570 ? tpic1 : mpic1}
+            alt="pic1"
           />
         </div>
       </div>
@@ -79,14 +59,8 @@ const HomeCard = () => {
         <div className="home__card__section__image">
           <img
             className="home__card__section__image--image"
-            src={
-              viewport > 900
-                ? require(`../../assets/home/desktop/` + secondimg)
-                : viewport > 570
-                ? require(`../../assets/home/tablet/` + secondimg)
-                : require(`../../assets/home/mobile/` + secondimg)
-            }
-            alt={secondimg}
+            src={viewport > 900 ? dpic2 : viewport > 570 ? tpic2 : mpic2}
+            alt="pic2"
           />
         </div>
       </div>

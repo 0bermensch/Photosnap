@@ -3,25 +3,25 @@ import { DimensionsContext } from "../../GlobalDimensions";
 import Button from "../Button";
 import arrow from "../../assets/shared/desktop/arrow-white.svg";
 
-const StoryCard = ({ title, datae, author, image, href }) => {
+const StoryCard = ({ title, date, author, image, href }) => {
   const { viewport } = useContext(DimensionsContext);
 
   return (
-    <div className="story__card">
+    <div className="stories__card">
       <img
-        className="story__card--image"
+        className="stories__card--image"
         src={
           viewport > 550
-            ? require(`../../assets/stories/desktop/` + image)
-            : require(`../../assets/stories/tablet/` + image)
+            ? require(`../../assets/stories/desktop/` + image).default
+            : require("../../assets/stories/mobile/" + image).default
         }
         alt={title}
       />
-      <div className="story__card__text">
-        <small className="story__card__text--date"></small>
-        <h3 className="story__card__text--title"></h3>
-        <small className="story__card__text--author"></small>
-        <hr className="story__card__text--linebreak" />
+      <div className="stories__card__textbox">
+        <small className="stories__card__textbox--date">{date}</small>
+        <h3 className="stories__card__textbox--title">{title}</h3>
+        <small className="stories__card__textbox--author">{author}</small>
+        <hr className="stories__card__textbox--linebreak" />
         <Button text="Read Story" arrow={arrow} href={href} />
       </div>
     </div>

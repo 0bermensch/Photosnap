@@ -13,13 +13,13 @@ const HomeLower = () => {
         subheading="No matter which the device you’re on, our site is fully responsive and stories 
             look beautiful on any screen."
       />
-      <FeatureCard
+      <FeaturesCard
         icon={nolimit}
         heading="No Photo Upload Limit"
         subheading="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share 
             all of your stories in one go."
       />
-      <FeatureCard
+      <FeaturesCard
         icon={embeded}
         heading="Available to Embed"
         subheading="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google 
