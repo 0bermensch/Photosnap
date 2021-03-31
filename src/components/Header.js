@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     onMobNavChange();
-  }, []);
+  });
 
   const openMobNav = () => {
     navState.current.classList.add("change");
@@ -54,8 +54,7 @@ const Header = () => {
         <NavLinks />
       </div>
       <Button text={"GET AN INVITE"} />
-      <a
-        href="#"
+      <div
         className="header__mob"
         ref={navState}
         onClick={() => setOpenNavMenu(!openNavMenu)}
@@ -72,7 +71,7 @@ const Header = () => {
           alt="close"
           onClick={closeMobNav}
         />
-      </a>
+      </div>
       <div
         className={`header__mob--nav ${openNavMenu ? "deployed" : ""} `}
         onClick={onMobNavChange}
