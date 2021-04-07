@@ -1547,26 +1547,26 @@ a {
   }
 }
 
-.pricing____card {
+.pricing__card {
   background-color: #dedede;
   padding: 40px 30px;
   text-align: center;
 }
 
-.pricing____card--description {
+.pricing__card--description {
   margin-top: 20px;
 }
 
-.pricing____card__textbox {
+.pricing__card__textbox {
   margin: 40px 0;
 }
 
-.pricing____card__textbox--price {
+.pricing__card__textbox--price {
   letter-spacing: 5px;
   font-weight: normal;
 }
 
-.pricing____card--button {
+.pricing__card--button {
   display: block;
   width: 100%;
   text-transform: uppercase;
@@ -1579,28 +1579,28 @@ a {
   letter-spacing: 3px;
 }
 
-.pricing____card--button:hover {
+.pricing__card--button:hover {
   background-color: #dedede;
   color: black;
   -webkit-filter: brightness(0.8);
           filter: brightness(0.8);
 }
 
-.pricing____card--button:active {
+.pricing__card--button:active {
   -webkit-transform: scale(0.985);
           transform: scale(0.985);
 }
 
-.pricing____card:nth-of-type(2) {
+.pricing__card:nth-of-type(2) {
   background-color: black;
   color: white;
 }
 
-.pricing____card:nth-of-type(2) .pricing__card--description {
+.pricing__card:nth-of-type(2) .pricing__card--description {
   color: #dedede;
 }
 
-.pricing____card:nth-of-type(2) button {
+.pricing__card:nth-of-type(2) button {
   background-color: white;
   color: black;
 }
